@@ -9,42 +9,42 @@
 // ==/UserScript==
 
 (function () {
-  "use strict";
+    "use strict";
 
-  const htmlTag = document.getElementsByTagName("html")[0];
-  const currentTheme = htmlTag.getAttribute("data-theme");
+    const htmlTag = document.getElementsByTagName("html")[0];
+    const currentTheme = htmlTag.getAttribute("data-theme");
 
-  if (
-    window.matchMedia &&
-    window.matchMedia("(prefers-color-scheme: light)").matches
-  ) {
-    if (currentTheme === "dark") {
-      htmlTag.setAttribute("data-theme", "light");
+    if (
+        window.matchMedia &&
+        window.matchMedia("(prefers-color-scheme: light)").matches
+    ) {
+        if (currentTheme === "dark") {
+            htmlTag.setAttribute("data-theme", "light");
+        }
     }
-  }
 
-  window
-    .matchMedia("(prefers-color-scheme: light)")
-    .addEventListener("change", (e) => {
-      if (currentTheme === "dark") {
-        htmlTag.setAttribute("data-theme", "light");
-      }
-    });
+    window
+        .matchMedia("(prefers-color-scheme: light)")
+        .addEventListener("change", (e) => {
+            if (currentTheme === "dark") {
+                htmlTag.setAttribute("data-theme", "light");
+            }
+        });
 
-  if (
-    window.matchMedia &&
-    window.matchMedia("(prefers-color-scheme: dark)").matches
-  ) {
-    if (currentTheme === "light") {
-      htmlTag.setAttribute("data-theme", "dark");
+    if (
+        window.matchMedia &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches
+    ) {
+        if (currentTheme === "light") {
+            htmlTag.setAttribute("data-theme", "dark");
+        }
     }
-  }
 
-  window
-    .matchMedia("(prefers-color-scheme: dark)")
-    .addEventListener("change", (e) => {
-      if (currentTheme === "light") {
-        htmlTag.setAttribute("data-theme", "dark");
-      }
-    });
+    window
+        .matchMedia("(prefers-color-scheme: dark)")
+        .addEventListener("change", (e) => {
+            if (currentTheme === "light") {
+                htmlTag.setAttribute("data-theme", "dark");
+            }
+        });
 })();

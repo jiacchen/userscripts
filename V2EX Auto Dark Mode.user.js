@@ -12,43 +12,43 @@
 // ==/UserScript==
 
 (function () {
-  "use strict";
+    "use strict";
 
-  const toggleLink = document
-    .querySelector(".light-toggle")
-    .getAttribute("href");
+    const toggleLink = document
+        .querySelector(".light-toggle")
+        .getAttribute("href");
 
-  if (
-    window.matchMedia &&
-    window.matchMedia("(prefers-color-scheme: light)").matches
-  ) {
-    if (SITE_NIGHT) {
-      window.location.replace(toggleLink);
+    if (
+        window.matchMedia &&
+        window.matchMedia("(prefers-color-scheme: light)").matches
+    ) {
+        if (SITE_NIGHT) {
+            window.location.replace(toggleLink);
+        }
     }
-  }
 
-  window
-    .matchMedia("(prefers-color-scheme: light)")
-    .addEventListener("change", (e) => {
-      if (SITE_NIGHT) {
-        window.location.replace(toggleLink);
-      }
-    });
+    window
+        .matchMedia("(prefers-color-scheme: light)")
+        .addEventListener("change", (e) => {
+            if (SITE_NIGHT) {
+                window.location.replace(toggleLink);
+            }
+        });
 
-  if (
-    window.matchMedia &&
-    window.matchMedia("(prefers-color-scheme: dark)").matches
-  ) {
-    if (SITE_NIGHT === 0) {
-      window.location.replace(toggleLink);
+    if (
+        window.matchMedia &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches
+    ) {
+        if (SITE_NIGHT === 0) {
+            window.location.replace(toggleLink);
+        }
     }
-  }
 
-  window
-    .matchMedia("(prefers-color-scheme: dark)")
-    .addEventListener("change", (e) => {
-      if (SITE_NIGHT === 0) {
-        window.location.replace(toggleLink);
-      }
-    });
+    window
+        .matchMedia("(prefers-color-scheme: dark)")
+        .addEventListener("change", (e) => {
+            if (SITE_NIGHT === 0) {
+                window.location.replace(toggleLink);
+            }
+        });
 })();

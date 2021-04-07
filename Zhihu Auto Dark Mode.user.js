@@ -9,43 +9,43 @@
 // ==/UserScript==
 
 (function () {
-  "use strict";
+    "use strict";
 
-  const currentTheme = document
-    .getElementsByTagName("html")[0]
-    .getAttribute("data-theme");
+    const currentTheme = document
+        .getElementsByTagName("html")[0]
+        .getAttribute("data-theme");
 
-  if (
-    window.matchMedia &&
-    window.matchMedia("(prefers-color-scheme: light)").matches
-  ) {
-    if (currentTheme === "dark") {
-      window.location.replace("?theme=light");
+    if (
+        window.matchMedia &&
+        window.matchMedia("(prefers-color-scheme: light)").matches
+    ) {
+        if (currentTheme === "dark") {
+            window.location.replace("?theme=light");
+        }
     }
-  }
 
-  window
-    .matchMedia("(prefers-color-scheme: light)")
-    .addEventListener("change", (e) => {
-      if (currentTheme === "dark") {
-        window.location.replace("?theme=light");
-      }
-    });
+    window
+        .matchMedia("(prefers-color-scheme: light)")
+        .addEventListener("change", (e) => {
+            if (currentTheme === "dark") {
+                window.location.replace("?theme=light");
+            }
+        });
 
-  if (
-    window.matchMedia &&
-    window.matchMedia("(prefers-color-scheme: dark)").matches
-  ) {
-    if (currentTheme === "light") {
-      window.location.replace("?theme=dark");
+    if (
+        window.matchMedia &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches
+    ) {
+        if (currentTheme === "light") {
+            window.location.replace("?theme=dark");
+        }
     }
-  }
 
-  window
-    .matchMedia("(prefers-color-scheme: dark)")
-    .addEventListener("change", (e) => {
-      if (currentTheme === "light") {
-        window.location.replace("?theme=dark");
-      }
-    });
+    window
+        .matchMedia("(prefers-color-scheme: dark)")
+        .addEventListener("change", (e) => {
+            if (currentTheme === "light") {
+                window.location.replace("?theme=dark");
+            }
+        });
 })();
