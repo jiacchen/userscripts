@@ -1,5 +1,6 @@
 // ==UserScript==
 // @name                 V2EX Auto Dark Mode
+// @name:ZH-CN           V2EX 自动切换深色模式
 // @namespace            http://tampermonkey.net/
 // @version              0.2
 // @description          Turn on/off dark mode automatically in v2ex.com based on the color scheme of OS.

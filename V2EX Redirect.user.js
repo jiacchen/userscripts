@@ -1,5 +1,6 @@
 // ==UserScript==
 // @name                 V2EX Redirect
+// @name:ZH-CN           V2EX 自动重定向
 // @namespace            http://tampermonkey.net/
 // @version              0.1
 // @description          Redirect subdomains of v2ex.com to www.v2ex.com
