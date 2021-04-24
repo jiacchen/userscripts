@@ -1,10 +1,10 @@
 /* ==UserStyle==
 @name               Subtitle Optimization for bilibili
-@name:ZH-CN         优化哔哩哔哩外挂字幕显示
+@name:zh-CN         优化哔哩哔哩外挂字幕显示
 @namespace          github.com/openstyles/stylus
 @version            1.0.2
 @description        Optimize the subtitles in bilibili.com
-@description:ZH-CN  优化 bilibili.com 的外挂字幕显示
+@description:zh-CN  优化 bilibili.com 的外挂字幕显示
 @author             Jiachen Chen
 ==/UserStyle== */
 @-moz-document domain("bilibili.com") {

@@ -1,10 +1,10 @@
 // ==UserScript==
 // @name                 Zhihu Auto Dark Mode
-// @name:ZH-CN           知乎自动切换深色模式
+// @name:zh-CN           知乎自动切换深色模式
 // @namespace            http://tampermonkey.net/
 // @version              0.1
 // @description          Turn on/off dark mode automatically in zhihu.com based on the color scheme of OS.
-// @description:ZH-CN    根据系统配色自动开启/关闭 zhihu.com 的深色模式
+// @description:zh-CN    根据系统配色自动开启/关闭 zhihu.com 的深色模式
 // @author               Jiachen Chen
 // @match                *://*.zhihu.com/*
 // ==/UserScript==
